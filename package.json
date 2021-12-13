@@ -4,10 +4,10 @@
   "main": "index.js",
   "scripts": {
     "backend:build": "node app.js",
-    "backend:dev": "nodemone app.js",
+    "backend:dev": "nodemon app.js",
     "frontend:build": "webpack --progress --config webpack.config.build.js",
     "frontend:dev": "webpack serve --progress --config webpack.config.development.js",
-    "start": "npm run frontend:dev"
+    "start": "concurrently --kill-others \"npm run backend:dev\" \"npm run frontend:dev\""
   },
   "author": "Matteo Barbero - Maio Web Design",
   "devDependencies": {
@@ -41,5 +41,17 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@prismicio/client": "^5.1.0",
+    "body-parser": "^1.19.1",
+    "concurrently": "^6.4.0",
+    "dotenv": "^10.0.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-logger": "0.0.3",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "prismic-dom": "^2.2.6",
+    "pug": "^3.0.2"
   }
 }
