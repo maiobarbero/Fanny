@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "backend:build": "node app.js",
+    "backend:dev": "nodemone app.js",
     "frontend:build": "webpack --progress --config webpack.config.build.js",
     "frontend:dev": "webpack serve --progress --config webpack.config.development.js",
     "start": "npm run frontend:dev"
