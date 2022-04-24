@@ -1,0 +1,8 @@
+html {
+  font-size: calc(100vw / 1920 * 10); //1920 = size of design
+}
+body {
+  @extend %description-16;
+
+  font-family: $font-suisse-bp;
+}
